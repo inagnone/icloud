@@ -16,6 +16,6 @@ public class OrderController {
 
     @GetMapping("payment")
     public void createPayment(){
-        restTemplate.postForObject("h/payment/save", Payment.class,null);
+        restTemplate.postForObject("http://"+paymentServiceName+"/save", Payment.class,null);
     }
 }
