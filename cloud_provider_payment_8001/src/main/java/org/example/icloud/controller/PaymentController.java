@@ -19,13 +19,13 @@ public class PaymentController {
 
     @PostMapping("save")
     @ResponseBody
-    public void addPayment(Payment payment){
-        paymentService.save(payment);
+    public String addPayment(){
+        return "调用支付服务";
     }
 
     @GetMapping()
     @ResponseBody
-    public List<Payment> list(){
-        return paymentService.list();
+    public String list(){
+        return "调用支付查询服务";
     }
 }
