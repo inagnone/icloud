@@ -4,6 +4,7 @@ import org.example.icloud.entity.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.example.icloud.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,6 +16,8 @@ public class PaymentController {
 
     @Autowired
     private PaymentService paymentService;
+    @Value("${server.port}")
+    private String port;
 
 
     @PostMapping("save")
@@ -26,6 +29,6 @@ public class PaymentController {
     @GetMapping()
     @ResponseBody
     public String list(){
-        return "调用支付查询服务";
+        return "调用支付查询服务"+port;
     }
 }

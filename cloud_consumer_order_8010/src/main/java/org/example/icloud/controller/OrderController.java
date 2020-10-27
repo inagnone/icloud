@@ -18,6 +18,6 @@ public class OrderController {
     @GetMapping("order")
     @ResponseBody
     public String createPayment(){
-        return restTemplate.postForObject(" http://" + paymentServiceName + "/save", null, String.class);
+        return restTemplate.postForObject("http://" + paymentServiceName + "/payment/save", null, String.class);
     }
 }
