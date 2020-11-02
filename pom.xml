@@ -12,6 +12,7 @@
     <module>cloud_consumer_order_8010</module>
     <module>cloud_eureka_server_7001</module>
     <module>cloud_api_common</module>
+    <module>cloud_consumner_feign_order_8011</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -113,6 +114,7 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>2.3.5.RELEASE</version>
         <configuration>
           <fork>true</fork>
           <addResources>true</addResources>
