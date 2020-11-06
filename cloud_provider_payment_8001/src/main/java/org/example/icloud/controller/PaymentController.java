@@ -23,12 +23,23 @@ public class PaymentController {
     @PostMapping("save")
     @ResponseBody
     public String addPayment(){
-        return "调用支付服务";
+        return "调用支付服务"+port;
     }
 
     @GetMapping()
     @ResponseBody
     public String list(){
         return "调用支付查询服务"+port;
+    }
+
+    @GetMapping("timeOut")
+    @ResponseBody
+    public String timeOut(){
+        try {
+            Thread.sleep(3000l);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "调用等待3s方法";
     }
 }
