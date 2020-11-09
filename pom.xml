@@ -13,6 +13,7 @@
     <module>cloud_eureka_server_7001</module>
     <module>cloud_api_common</module>
     <module>cloud_consumner_feign_order_8011</module>
+    <module>cloud_provider_hystrix_payment_8020</module>
   </modules>
   <packaging>pom</packaging>
 
