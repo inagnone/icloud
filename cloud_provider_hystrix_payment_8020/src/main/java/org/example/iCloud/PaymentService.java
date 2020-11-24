@@ -1,8 +1,11 @@
 package org.example.iCloud;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Created by 10235627@zte.intra on 20-11-9.
  */
+@Service
 public class PaymentService {
 
     public String paymentInfo_ok(){

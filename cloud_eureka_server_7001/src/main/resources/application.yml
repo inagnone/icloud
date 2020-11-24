@@ -5,9 +5,9 @@ eureka:
     instance:
         hostname: eureka1
     client:
-        #是否向注册中心注册自己
+        #是否从Eureka获取注册信息,默认是true,一般server端不需要
         fetch-registry: false
-        #是否检索服务
+        #是否向注册中心注册自己
         register-with-eureka: false
         #eurekaServer查询服务和注册服务的地址
         service-url:

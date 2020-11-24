@@ -1,5 +1,6 @@
 package org.example.iCloud;
 
+import com.netflix.ribbon.proxy.annotation.Hystrix;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @GetMapping("ok")
+    @Hystrix()
     public String paymentInfo_ok() {
         return paymentService.paymentInfo_ok();
     }
