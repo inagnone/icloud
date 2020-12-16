@@ -14,6 +14,7 @@
     <module>cloud_api_common</module>
     <module>cloud_consumner_feign_order_8011</module>
     <module>cloud_provider_hystrix_payment_8020</module>
+      <module>cloud_consumer_feign_hystrix_order_8012</module>
   </modules>
   <packaging>pom</packaging>
 

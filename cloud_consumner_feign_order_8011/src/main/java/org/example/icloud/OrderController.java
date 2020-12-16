@@ -27,6 +27,4 @@ public class OrderController {
     public String callPaymentTimeOut(){
         return orderService.timeOut();
     }
-
-
 }

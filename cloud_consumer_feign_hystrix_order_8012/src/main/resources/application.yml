@@ -1,9 +1,9 @@
 server:
-  port: 8011
+  port: 8012
 
 spring:
   application:
-    name: cloud-feign-order-service
+    name: cloud-consumner-feign-hystrix-order-service
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -30,5 +30,6 @@ logging:
     #feign日志以什么级别监控哪个接口
     org.example.icloud.OrderService:  debug
 
-icloud:
-  payment-service-name: CLOUD-PAYMENT-SERVICE
+feign:
+  hystrix:
+    enabled: true
