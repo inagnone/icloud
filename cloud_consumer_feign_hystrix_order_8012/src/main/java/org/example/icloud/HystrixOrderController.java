@@ -53,6 +53,7 @@ public class HystrixOrderController {
         return "客户端兜低方法";
     }
 
+
     public String gloubleFallbackFunction() {
         return "客户端全局兜低方法";
     }

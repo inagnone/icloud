@@ -40,14 +40,21 @@ public class PaymentService {
             fallbackMethod = "circuitBreakerFallbackFunction",commandProperties = {
                 //是否开启断路器
                 @HystrixProperty(name="circuitBreaker.enabled",value = "true"),
-                //请求次数
+                //请求总数阈值
                 @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold",value = "10"),
-                //时间范围
+                //快照时间窗口
                 @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds",value = "10000"),
-                //失败率达到多少后熔断
+                //错误百分比阈值
                 @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage",value = "60")
     })
-    public String paymentCircuitBreaker() {
+    public String paymentCircuitBreaker(String flag) {
+        if("circuitBreaker".equals(flag)){
+            throw new RuntimeException();
+        }
         return "circuitBreaker service running";
+    }
+
+    public String circuitBreakerFallbackFunction(String flag) {
+        return "服务熔断了";
     }
 }
